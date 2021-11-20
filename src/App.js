@@ -4,9 +4,9 @@ import Toggle from './Toggle'
 
 function App() {
   return (
-    <div className="min-h-screen mx-auto text-center">
+    <div className="min-h-screen mx-auto text-center typography">
 
-      <h1>Weather App</h1>
+      <h1 className="serif font-bold">Weather App</h1>
 
       <Toggle />
 
