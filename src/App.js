@@ -27,10 +27,11 @@ function App() {
       {/* Toggle for Imperial and Metric */}
 
       {/* Mobile - tabs for CURRENT | FORECAST */}
+      {/* http://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_API_KEY}&q=${zipcode}&days=7&aqi=no&alerts=no */}
 
       {/* CURRENT WEATHER */}
 
-      {/* FORECAST WEATHER */}
+      {/* 7-DAY FORECAST WEATHER */}
 
       <Footer />
 
