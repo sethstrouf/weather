@@ -1,6 +1,5 @@
 import React from 'react'
 import Footer from './Footer';
-import Toggle from './Toggle'
 
 function App() {
   return (
@@ -8,7 +7,7 @@ function App() {
 
       <h1 className="serif font-bold">Weather App</h1>
 
-      <Toggle />
+      {/* Toggle for Imperial and Metric */}
 
       {/* Mobile - tabs for CURRENT | FORECAST */}
 
