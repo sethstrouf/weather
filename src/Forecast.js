@@ -11,7 +11,7 @@ const Forecast = ({forecast}) => {
         {/* Either say "Today" or the forecast's day */}
         {Moment(currentDate).isSame(forecast.date) 
           ? 'Today' 
-          : Moment(forecast.date, 'Y-M-D').format('dddd')
+          : 'Tomorrow'
         }
       </h1>
       <p>Max Temp: {forecast.day.maxtemp_f}</p>

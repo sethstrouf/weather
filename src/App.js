@@ -28,7 +28,7 @@ function App() {
       return
     }
     /* Get request from Weather API */
-    axios(`https://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_API_KEY}&q=${zipcode}&days=7&aqi=no&alerts=no`)
+    axios(`https://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_API_KEY}&q=${zipcode}&days=2&aqi=no&alerts=yes`)
       .then(response => {
         setData(response.data)
         errorDiv.innerText = '\u00A0'
