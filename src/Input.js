@@ -4,7 +4,7 @@ const Input = ({handleChange, handleSubmit}) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <p id="error" className="text-red-600 font-bold"></p>
+      <p id="error" className="text-red-600 font-bold">&nbsp;</p>
       <label htmlFor="zip" value="Zip Code" className="hidden">
         Enter a 5-digit Zip Code
       </label>

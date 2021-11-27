@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Current = ({current}) => {
+const Current = ({current, today}) => {
   return (
     <div>
       <img src={current.condition.icon} alt={current.condition.text} 

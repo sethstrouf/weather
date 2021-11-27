@@ -31,6 +31,7 @@ function App() {
     axios(`https://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_API_KEY}&q=${zipcode}&days=7&aqi=no&alerts=no`)
       .then(response => {
         setData(response.data)
+        errorDiv.innerText = '\u00A0'
       })
       .catch(error => {
         errorDiv.textContent = error.response.data.error.message
