@@ -40,23 +40,25 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen mx-auto text-center typography text-gray-800
-                    relative bg-gray-50 px-8
+    <div className="text-center typography text-gray-800 bg-gray-200
                     sm:text-lg md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl">
+      <div className="min-h-screen relative mx-auto 
+                      px-4 sm:px-8 lg:px-12 xl:px-24 2xl:px-48
+">
 
-      <h1 className="serif font-bold pt-4 text-rose-700
-                    text-2xl sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">
-                      Weather App
-      </h1>
+        <h1 className="serif font-bold pt-4 text-rose-700
+                      text-2xl sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">
+                        Weather App
+        </h1>
 
-      {/* Input Zip Code */}
-      <Input handleChange={handleChange} handleSubmit={handleSubmit} />
+        {/* Input Zip Code */}
+        <Input handleChange={handleChange} handleSubmit={handleSubmit} />
 
-      {/* Display data once it's been submitted */}
-      {data === null ? null : <Data data={data} />}
+        {/* Display data once it's been submitted */}
+        {data === null ? null : <Data data={data} />}
 
-      <Footer />
-
+        <Footer />
+      </div>
     </div>
   );
 }

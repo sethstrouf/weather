@@ -6,7 +6,8 @@ const Forecast = ({forecast}) => {
   const currentDate = Moment().format('Y-M-D')
 
   return (
-    <div className="pb-2 bg-rose-50 border-2 border-rose-500 rounded">
+    <div className="pb-2 bg-rose-50 border-2 border-rose-500 rounded
+                    md:flex-1">
       <h1 className="serif font-bold pb-1 bg-rose-600 text-gray-50
                      text-xl sm:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl">
         {/* Either say "Today" or the forecast's day */}
@@ -23,12 +24,12 @@ const Forecast = ({forecast}) => {
       </h1> */}
       <div className="py-2 flex justify-center align-bottom 
                       bg-rose-200">
-        <div className="flex-grow border-r border-gray-500">
+        <div className="flex-1 border-r border-gray-500">
           <h2 className="font-bold">Sunrise</h2>
           <p>{forecast.astro.sunrise}</p>
         </div>
 
-        <div className="flex-grow">
+        <div className="flex-1">
           <h2 className="font-bold">Sunset</h2>
           <p>{forecast.astro.sunset}</p>
         </div>
@@ -43,15 +44,15 @@ const Forecast = ({forecast}) => {
 
       {/* Flex for trio of information */}
       <div className="pt-2 flex justify-center items-center">
-        <div className="flex-grow border-r border-rose-500">
+        <div className="flex-1 border-r border-rose-500">
           <h2 className="font-bold">Max Wind</h2>
           <p>{forecast.day.maxwind_mph} mph</p>
         </div>
-        <div className="flex-grow border-r border-rose-500">
+        <div className="flex-1 border-r border-rose-500">
           <h2 className="font-bold">Total Precipitation</h2>
           <p>{forecast.day.totalprecip_in}"</p>
         </div>
-        <div className="flex-grow">
+        <div className="flex-1">
           <h2 className="font-bold">Rain/Snow</h2>
           <p>{forecast.day.daily_chance_of_rain}%/{forecast.day.daily_chance_of_snow}%</p>
         </div>

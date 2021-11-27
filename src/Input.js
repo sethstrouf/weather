@@ -12,8 +12,9 @@ const Input = ({handleChange, handleSubmit}) => {
              onChange={handleChange}
              title="Must be 5 numbers"
              className="text-center border-b border-rose-500 bg-transparent
-                        focus:bg-transparent focus:border-transparent w-full
-                        focus:outline-none focus:ring focus:ring-rose-500" />
+                        focus:bg-transparent focus:border-transparent w-11/12
+                        focus:outline-none focus:ring focus:ring-rose-500
+                        sm:w-10/12 md:w-9/12 lg:w-8/12 xl:w-7/12 2xl:w-6/12" />
     </form>
   )
 }

@@ -20,15 +20,15 @@ const Current = ({location, current}) => {
 
       {/* Flex for trio of information */}
       <div className="pt-2 flex justify-center items-center">
-        <div className="flex-grow border-r border-rose-500">
+        <div className="flex-1 border-r border-rose-500">
           <h2 className="font-bold">Wind</h2>
           <p>{current.wind_mph} mph ({current.wind_dir})</p>
         </div>
-        <div className="flex-grow border-r border-rose-500">
+        <div className="flex-1 border-r border-rose-500">
           <h2 className="font-bold">Precipitation</h2>
           <p>{current.precip_in}"</p>
         </div>
-        <div className="flex-grow">
+        <div className="flex-1">
           <h2 className="font-bold">Humidity</h2>
           <p>{current.humidity}%</p>
         </div>
