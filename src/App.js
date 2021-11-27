@@ -1,5 +1,6 @@
 import React from 'react'
 import Input from './Input'
+import Data from './Data'
 import Footer from './Footer'
 
 function App() {
@@ -27,7 +28,6 @@ function App() {
       return
     }
     /* Get request from Weather API */
-    console.log(`${zipcode}`);
     axios(`http://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_API_KEY}&q=${zipcode}&days=7&aqi=no&alerts=no`)
       .then(response => {
         setData(response.data)
@@ -51,7 +51,8 @@ function App() {
       {/* http://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_API_KEY}&q=${zipcode}&days=7&aqi=no&alerts=no */}
 
       {/* CURRENT WEATHER */}
-      <p>{data === null ? '' : data.location.name }</p>
+      {data === null ? null : <Data data={data} />}
+      {}
 
       {/* 7-DAY FORECAST WEATHER */}
 
