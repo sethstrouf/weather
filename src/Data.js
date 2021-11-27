@@ -4,7 +4,7 @@ import Forecast from "./Forecast";
 
 const Data = ({ data }) => {
   return (
-    <main className="pb-12 space-y-4 xl:space-y-8 2xl:space-y-12">
+    <main className="py-4 md:py-8 xl:py-12 space-y-4 xl:space-y-8 2xl:space-y-12">
       <Current location={data.location} current={data.current} />
       <div
         className="space-y-4 pb-12 md:space-y-0 md:flex justify-center 
