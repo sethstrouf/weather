@@ -8,10 +8,10 @@ const Input = ({handleChange, handleSubmit}) => {
       <label htmlFor="zip" value="Zip Code" className="hidden">
         Enter a 5-digit Zip Code
       </label>
-      <input type="text" id="zip" placeholder="Zip Code"
+      <input type="text" id="zip" placeholder="Enter Zip Code"
              onChange={handleChange}
              title="Must be 5 numbers"
-             className="bg-rose-100 border border-rose-600" />
+             className="text-center border-b border-rose-600" />
     </form>
   )
 }
