@@ -6,11 +6,11 @@ const Forecast = ({ forecast }) => {
 
   return (
     <div
-      className="pb-2 bg-rose-50 border-2 border-rose-500 rounded
+      className="pb-2 bg-rose-50 border border-rose-600 rounded
                     md:flex-1"
     >
       <h1
-        className="serif font-bold pb-1 bg-rose-600 text-gray-50
+        className="serif font-bold pb-1 bg-rose-700 text-gray-50
                      text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
       >
         {/* Either say "Today" or the forecast's day */}
@@ -26,7 +26,7 @@ const Forecast = ({ forecast }) => {
         className="py-2 flex justify-center align-bottom 
                       bg-rose-200"
       >
-        <div className="flex-1 border-r border-gray-500">
+        <div className="flex-1  border-rose-500">
           <h2 className="font-bold">Sunrise</h2>
           <p>{forecast.astro.sunrise}</p>
         </div>
@@ -37,16 +37,16 @@ const Forecast = ({ forecast }) => {
         </div>
       </div>
 
-      <p className="pt-4 font-bold text-red-600">
+      <p className="p-8 xl:p-12 font-bold text-red-600">
         {forecast.day.maxtemp_f}&deg;
         <span className="text-gray-500 font-bold"> | </span>
-        <span className="pb-4 font-bold text-blue-600">
+        <span className="font-bold text-blue-600">
           {forecast.day.mintemp_f}&deg;
         </span>
       </p>
 
       {/* Flex for trio of information */}
-      <div className="pt-2 flex justify-center items-center">
+      <div className="flex justify-center items-center">
         <div className="flex-1 border-r border-rose-500">
           <h2 className="font-bold">Max Wind</h2>
           <p>{forecast.day.maxwind_mph} mph</p>

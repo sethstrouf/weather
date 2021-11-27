@@ -52,7 +52,7 @@ function App() {
       >
         <header>
           <h1
-            className="serif font-bold pt-4 text-rose-600 text-2xl 
+            className="serif font-bold pt-4 text-rose-700 text-2xl 
                          sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl"
           >
             Weather App
