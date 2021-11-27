@@ -28,7 +28,7 @@ function App() {
       return
     }
     /* Get request from Weather API */
-    axios(`https://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_API_KEY}&q=${zipcode}&days=2&aqi=no&alerts=yes`)
+    axios(`https://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_API_KEY}&q=${zipcode}&days=2&aqi=no&alerts=no`)
       .then(response => {
         setData(response.data)
         errorDiv.innerText = '\u00A0'
@@ -36,11 +36,12 @@ function App() {
       })
       .catch(error => {
         errorDiv.textContent = error.response.data.error.message
+        console.log(error);
       })
   }
 
   return (
-    <div className="text-center typography text-gray-800 bg-gray-200
+    <div className="text-center typography text-gray-800 bg-gray-50
                     sm:text-lg lg:text-xl 2xl:text-2xl">
       <div className="min-h-screen relative mx-auto 
                       px-4 sm:px-8 lg:px-12 xl:px-24 2xl:px-48
@@ -54,8 +55,8 @@ function App() {
         {/* Input Zip Code */}
         <Input handleChange={handleChange} handleSubmit={handleSubmit} />
 
-        {/* Display data once it's been submitted */}
-        {data === null ? null : <Data data={data} />}
+          {/* Display data once it's been submitted */}
+          {data === null ? null : <Data data={data} />}
 
         <Footer />
       </div>
