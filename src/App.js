@@ -39,22 +39,17 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen mx-auto text-center typography">
+    <div className="min-h-screen mx-auto text-center typography text-gray-800
+                    relative bg-rose-50 border-8 border-rose-600 rounded
+                    md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl">
 
-      <h1 className="serif font-bold">Weather App</h1>
+      <h1 className="serif font-bold text-xl pt-4">Weather App</h1>
 
       {/* Input Zip Code */}
       <Input handleChange={handleChange} handleSubmit={handleSubmit} />
 
-      {/* Toggle for Imperial and Metric */}
-
-      {/* Mobile - tabs for CURRENT | FORECAST */}
-
-      {data === null 
-        ? null 
-        : <Data data={data} />
-      }
-
+      {/* Display data once it's been submitted */}
+      {data === null ? null : <Data data={data} />}
 
       <Footer />
 
