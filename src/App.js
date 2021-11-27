@@ -1,5 +1,5 @@
 import React from 'react'
-import Zipcode from './Zipcode'
+import Input from './Input'
 import Footer from './Footer'
 
 function App() {
@@ -43,7 +43,7 @@ function App() {
       <h1 className="serif font-bold">Weather App</h1>
 
       {/* Input Zip Code */}
-      <Zipcode handleChange={handleChange} handleSubmit={handleSubmit} />
+      <Input handleChange={handleChange} handleSubmit={handleSubmit} />
 
       {/* Toggle for Imperial and Metric */}
 

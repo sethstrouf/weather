@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Zipcode = ({handleChange, handleSubmit}) => {
+const Input = ({handleChange, handleSubmit}) => {
 
   return (
     <form onSubmit={handleSubmit}>
@@ -16,4 +16,4 @@ const Zipcode = ({handleChange, handleSubmit}) => {
   )
 }
 
-export default Zipcode
+export default Input
