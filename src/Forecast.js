@@ -22,7 +22,7 @@ const Forecast = ({forecast}) => {
         Sun & Moon
       </h1> */}
       <div className="py-2 flex justify-center align-bottom 
-                      bg-gray-800 text-gray-50">
+                      bg-rose-200">
         <div className="flex-grow border-r border-gray-500">
           <h2 className="font-bold">Sunrise</h2>
           <p>{forecast.astro.sunrise}</p>
