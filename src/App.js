@@ -15,15 +15,15 @@ function App() {
 
   const handleSubmit = event => {
     event.preventDefault();
+    const errorDiv = document.getElementById('error')
+
     /* Input Validation */
     if(zipcode === '') {
-      const error = document.getElementById('error')
-      error.textContent = "Cannot be blank"
+      errorDiv.textContent = "Cannot be blank"
       return
     }
     if(!regex.test(zipcode)) {
-      const error = document.getElementById('error')
-      error.textContent = "Must be 5 numbers"
+      errorDiv.textContent = "Must be 5 numbers"
       return
     }
     /* Get request from Weather API */
@@ -33,7 +33,7 @@ function App() {
         setData(response.data)
       })
       .catch(error => {
-        console.log(error);
+        errorDiv.textContent = error.response.data.error.message
       })
   }
 
