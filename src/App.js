@@ -32,6 +32,7 @@ function App() {
       .then(response => {
         setData(response.data)
         errorDiv.innerText = '\u00A0'
+        document.getElementById('zip').value = ''
       })
       .catch(error => {
         errorDiv.textContent = error.response.data.error.message
@@ -40,10 +41,11 @@ function App() {
 
   return (
     <div className="min-h-screen mx-auto text-center typography text-gray-800
-                    relative bg-rose-50 border-8 border-rose-600 rounded
+                    relative bg-gray-100 px-8
+
                     md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl">
 
-      <h1 className="serif font-bold text-xl pt-4">Weather App</h1>
+      <h1 className="serif font-bold text-2xl pt-4 text-rose-700">Weather App</h1>
 
       {/* Input Zip Code */}
       <Input handleChange={handleChange} handleSubmit={handleSubmit} />

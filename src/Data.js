@@ -6,9 +6,9 @@ import Forecast from './Forecast'
 const Data = ({data}) => {
 
   return (
-    <div className="pt-4 pb-12">
+    <div className="pb-12 space-y-4">
       <div className="font-bold text-xl text-red-700">
-        Alerts{data.alerts.alert[0]}
+        {data.alerts.alert[0]}
       </div>
       <Location location={data.location} />
       <Current current={data.current} />
