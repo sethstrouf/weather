@@ -8,11 +8,11 @@ const Data = ({data}) => {
   return (
     <div>
       <Location location={data.location} />
-      <Current current={data.current} today={data.forecast.forecastday[0]} />
+      <Current current={data.current} />
       {/* Today's Forecast (max temp, etc) */}
-      <Forecast forecast={data.forecast.forecastday[1]} />
+      <Forecast forecast={data.forecast.forecastday[0]} />
       {/* Tomorrow's Forecast */}
-
+      <Forecast forecast={data.forecast.forecastday[1]} />
     </div>
   )
 }

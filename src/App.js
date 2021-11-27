@@ -50,7 +50,10 @@ function App() {
 
       {/* Mobile - tabs for CURRENT | FORECAST */}
 
-      {data === null ? null : <Data data={data} />}
+      {data === null 
+        ? null 
+        : <Data data={data} />
+      }
 
 
       <Footer />

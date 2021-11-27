@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Current = ({current, today}) => {
+const Current = ({current}) => {
   return (
     <div>
       <h1 className="font-bold text-lg">Current</h1>
@@ -13,9 +13,6 @@ const Current = ({current, today}) => {
       <p>Wind Dir: {current.wind_dir}</p>
       <p>Precipitation: {current.precip_in}</p>
       <p>Humidity: {current.humidity}</p>
-
-      <h1 className="font-bold text-lg">Today</h1>
-      <p>Max Temp: {today.day.maxtemp_f}</p>
     </div>
   )
 }
