@@ -42,7 +42,6 @@ function App() {
   return (
     <div className="min-h-screen mx-auto text-center typography text-gray-800
                     relative bg-gray-50 px-8
-
                     sm:text-lg md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl">
 
       <h1 className="serif font-bold pt-4 text-rose-700

@@ -42,8 +42,8 @@ const Forecast = ({forecast}) => {
       </p>
 
       {/* Flex for trio of information */}
-      <div className="pt-2 flex justify-center align-bottom">
-        <div className="flex-grow-0 px-6 border-r border-rose-500">
+      <div className="pt-2 flex justify-center items-center">
+        <div className="flex-grow border-r border-rose-500">
           <h2 className="font-bold">Max Wind</h2>
           <p>{forecast.day.maxwind_mph} mph</p>
         </div>
@@ -51,7 +51,7 @@ const Forecast = ({forecast}) => {
           <h2 className="font-bold">Total Precipitation</h2>
           <p>{forecast.day.totalprecip_in}"</p>
         </div>
-        <div className="flex-grow-0 px-6">
+        <div className="flex-grow">
           <h2 className="font-bold">Rain/Snow</h2>
           <p>{forecast.day.daily_chance_of_rain}%/{forecast.day.daily_chance_of_snow}%</p>
         </div>
