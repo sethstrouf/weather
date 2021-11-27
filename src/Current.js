@@ -12,6 +12,7 @@ const Current = ({current, today}) => {
       <p>Wind Dir: {current.wind_dir}</p>
       <p>Precipitation: {current.precip_in}</p>
       <p>Humidity: {current.humidity}</p>
+      <p>Max Temp: {today.day.maxtemp_f}</p>
     </div>
   )
 }
