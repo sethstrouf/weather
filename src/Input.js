@@ -11,7 +11,9 @@ const Input = ({handleChange, handleSubmit}) => {
       <input type="text" id="zip" placeholder="Enter Zip Code"
              onChange={handleChange}
              title="Must be 5 numbers"
-             className="text-center border-b border-rose-600" />
+             className="text-center border-b border-rose-600
+                        focus:bg-transparent focus:border-transparent
+                        focus:outline-none focus:ring focus:ring-rose-600" />
     </form>
   )
 }
