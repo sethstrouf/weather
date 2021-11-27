@@ -15,20 +15,48 @@ const Forecast = ({forecast}) => {
           : 'Tomorrow'
         }
       </h1>
-      <p>Max Temp: {forecast.day.maxtemp_f}&deg;</p>
-      <p>Min Temp: {forecast.day.mintemp_f}&deg;</p>
-      <p>Max Wind: {forecast.day.maxwind_mph} mph</p>
-      <p>Total Precipitation: {forecast.day.totalprecip_in}"</p>
-      <p>Chance of Rain: {forecast.day.daily_chance_of_rain}%</p>
-      <p>Chance of Snow: {forecast.day.daily_chance_of_snow}%</p>
 
-      <h1 className="font-bold serif pt-4
-                    text-xl sm:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl">
+      {/* Sun and moon information */}
+    {/*   <h1 className="font-bold serif
+              text-xl sm:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl">
         Sun & Moon
-      </h1>
-      <p>Sunrise: {forecast.astro.sunrise}</p>
-      <p>Sunset: {forecast.astro.sunset}</p>
-      <p>Moon Phase: {forecast.astro.moon_phase}</p>
+      </h1> */}
+      <div className="py-2 flex justify-center align-bottom 
+                      bg-gray-800 text-gray-50">
+        <div className="flex-grow border-r border-gray-500">
+          <h2 className="font-bold">Sunrise</h2>
+          <p>{forecast.astro.sunrise}</p>
+        </div>
+
+        <div className="flex-grow">
+          <h2 className="font-bold">Sunset</h2>
+          <p>{forecast.astro.sunset}</p>
+        </div>
+      </div>
+
+      <p className="pt-4 font-bold text-red-600">{forecast.day.maxtemp_f}&deg;
+        <span className="text-gray-500 font-bold"> | </span>
+        <span className="pb-4 font-bold text-blue-600">
+          {forecast.day.mintemp_f}&deg;
+        </span>
+      </p>
+
+      {/* Flex for trio of information */}
+      <div className="pt-2 flex justify-center align-bottom">
+        <div className="flex-grow-0 px-6 border-r border-rose-500">
+          <h2 className="font-bold">Max Wind</h2>
+          <p>{forecast.day.maxwind_mph} mph</p>
+        </div>
+        <div className="flex-grow border-r border-rose-500">
+          <h2 className="font-bold">Total Precipitation</h2>
+          <p>{forecast.day.totalprecip_in}"</p>
+        </div>
+        <div className="flex-grow-0 px-6">
+          <h2 className="font-bold">Rain/Snow</h2>
+          <p>{forecast.day.daily_chance_of_rain}%/{forecast.day.daily_chance_of_snow}%</p>
+        </div>
+      </div>
+
     </div>
   )
 }

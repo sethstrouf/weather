@@ -17,8 +17,10 @@ const Current = ({location, current}) => {
         <img src={current.condition.icon} alt={current.condition.text} 
             className="mx-auto" />
       </div>
-      <div className="p-2 flex justify-center align-bottom">
-        <div className="flex-grow border-r border-rose-500">
+
+      {/* Flex for trio of information */}
+      <div className="pt-2 flex justify-center align-bottom">
+        <div className="flex-grow-0 px-8 border-r border-rose-500">
           <h2 className="font-bold">Wind</h2>
           <p>{current.wind_mph} mph ({current.wind_dir})</p>
         </div>
@@ -26,11 +28,12 @@ const Current = ({location, current}) => {
           <h2 className="font-bold">Precipitation</h2>
           <p>{current.precip_in}"</p>
         </div>
-        <div className="flex-grow">
+        <div className="flex-grow-0 px-8">
           <h2 className="font-bold">Humidity</h2>
           <p>{current.humidity}%</p>
         </div>
       </div>
+
     </div>
   )
 }
