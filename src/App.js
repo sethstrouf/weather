@@ -43,9 +43,12 @@ function App() {
     <div className="min-h-screen mx-auto text-center typography text-gray-800
                     relative bg-gray-100 px-8
 
-                    md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl">
+                    sm:text-lg md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl">
 
-      <h1 className="serif font-bold text-2xl pt-4 text-rose-700">Weather App</h1>
+      <h1 className="serif font-bold pt-4 text-rose-700
+                    text-2xl sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">
+                      Weather App
+      </h1>
 
       {/* Input Zip Code */}
       <Input handleChange={handleChange} handleSubmit={handleSubmit} />

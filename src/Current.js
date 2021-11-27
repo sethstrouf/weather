@@ -1,18 +1,36 @@
 import React from 'react'
+import Moment from 'moment'
 
-const Current = ({current}) => {
+const Current = ({location, current}) => {
   return (
-    <div className="p-2 bg-rose-50 border-2 border-rose-500 rounded">
-      <img src={current.condition.icon} alt={current.condition.text} 
-          className="mx-auto pb-2" />
-      <h1 className="font-bold text-lg">Current</h1>
-      <p>Temperature: {current.temp_f}&deg;</p>
-      <p>Feels like: {current.feelslike_f}&deg;</p>
-      <p>Condition: {current.condition.text}</p>
-      <p>Wind MPH: {current.wind_mph} mph</p>
-      <p>Wind Dir: {current.wind_dir}</p>
-      <p>Precipitation: {current.precip_in}"</p>
-      <p>Humidity: {current.humidity}%</p>
+    <div className="pb-2 bg-rose-50 border-2 border-rose-500 rounded">
+      <h1 className="hidden">Current</h1>
+      <p className="serif font-bold pb-1 bg-rose-600 text-gray-50
+                    text-xl sm:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl">
+        {location.name}
+      </p>
+      <p>{current.condition.text}, {current.temp_f}&deg;</p>
+      <p className="text-sm sm:text-base lg:text-lg xl:text-xl 2xl:text-2xl">
+        {Moment(location.localtime, 'Y-M-D H:m:s').format('LT')}
+      </p>
+      <div className="h-14">
+        <img src={current.condition.icon} alt={current.condition.text} 
+            className="mx-auto" />
+      </div>
+      <div className="p-2 flex justify-center align-bottom">
+        <div className="flex-grow border-r border-rose-500">
+          <h2 className="font-bold">Wind</h2>
+          <p>{current.wind_mph} mph ({current.wind_dir})</p>
+        </div>
+        <div className="flex-grow border-r border-rose-500">
+          <h2 className="font-bold">Precipitation</h2>
+          <p>{current.precip_in}"</p>
+        </div>
+        <div className="flex-grow">
+          <h2 className="font-bold">Humidity</h2>
+          <p>{current.humidity}%</p>
+        </div>
+      </div>
     </div>
   )
 }
