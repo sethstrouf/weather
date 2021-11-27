@@ -41,7 +41,7 @@ function App() {
 
   return (
     <div className="text-center typography text-gray-800 bg-gray-200
-                    sm:text-lg md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl">
+                    sm:text-lg lg:text-xl 2xl:text-2xl">
       <div className="min-h-screen relative mx-auto 
                       px-4 sm:px-8 lg:px-12 xl:px-24 2xl:px-48
 ">

@@ -3,10 +3,11 @@ import Moment from 'moment'
 
 const Current = ({location, current}) => {
   return (
-    <div className="pb-2 bg-rose-50 border-2 border-rose-500 rounded">
+    <div className="pb-2 bg-rose-50 border-2 border-rose-500 rounded
+                    md:w-10/12 xl:w-8/12 2xl:w-6/12 mx-auto">
       <h1 className="hidden">Current</h1>
       <p className="serif font-bold pb-1 bg-rose-600 text-gray-50
-                    text-xl sm:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl">
+                    text-xl lg:text-2xl xl:text-3xl">
         {location.name}
       </p>
       <p>{current.condition.text}, {current.temp_f}&deg;</p>

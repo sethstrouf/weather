@@ -9,7 +9,7 @@ const Forecast = ({forecast}) => {
     <div className="pb-2 bg-rose-50 border-2 border-rose-500 rounded
                     md:flex-1">
       <h1 className="serif font-bold pb-1 bg-rose-600 text-gray-50
-                     text-xl sm:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl">
+                     text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl">
         {/* Either say "Today" or the forecast's day */}
         {Moment(currentDate).isSame(forecast.date) 
           ? 'Today' 
